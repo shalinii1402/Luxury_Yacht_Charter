@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet | Azure Yacht Charters</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="main-header" class="scrolled">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Azure Logo">AZURE</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fleet.html" class="nav-link active">Our Fleet</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="blog.html" class="nav-link">Travel Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="inquiry.html" class="btn btn-primary">Book Now</a>
+
+                <div class="profile-dropdown">
+                    <button class="profile-icon" id="profile-toggle" aria-label="User Profile">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown-menu" id="profile-menu">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <!-- Page Header -->
+    <section class="page-header"
+        style="background-image: url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&q=80&w=1200');">
+        <div class="container text-center reveal">
+            <h1>Our Exclusive Fleet</h1>
+            <p>From sleek motor yachts to elegant sailing vessels, find your perfect match.</p>
+        </div>
+    </section>
+
+    <!-- Fleet Listing -->
+    <section class="section">
+        <div class="container">
+            <div class="fleet-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar reveal">
+                    <h3>Filter Selection</h3>
+
+                    <div class="filter-group">
+                        <label>Yacht Type</label>
+                        <select id="typeFilter">
+                            <option value="all">All Types</option>
+                            <option value="motor">Motor Yacht</option>
+                            <option value="sailing">Sailing Yacht</option>
+                            <option value="catamaran">Catamaran</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Guests</label>
+                        <select id="guestFilter">
+                            <option value="any">Any Capacity</option>
+                            <option value="6">1-6 Guests</option>
+                            <option value="12">6-12 Guests</option>
+                            <option value="13">12+ Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Price Range / Week</label>
+                        <div class="range-inputs">
+                            <input type="number" id="minPrice" placeholder="Min $">
+                            <input type="number" id="maxPrice" placeholder="Max $">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="applyFilters" style="width: 100%; margin-top: 20px;">Refine
+                        Search</button>
+                    <button class="btn btn-outline" id="resetFilters"
+                        style="width: 100%; margin-top: 10px;">Reset</button>
+                </aside>
+
+                <!-- Fleet Main Content -->
+                <div class="fleet-main">
+
+                    <!-- Visual Category Filters -->
+                    <div class="category-filters reveal">
+                        <div class="cat-filter-card active" data-filter="all">
+                            <i class="fas fa-th"></i>
+                            <span>All Yachts</span>
+                        </div>
+                        <div class="cat-filter-card" data-filter="motor">
+                            <i class="fas fa-ship"></i>
+                            <span>Motor Yachts</span>
+                        </div>
+                        <div class="cat-filter-card" data-filter="sailing">
+                            <i class="fas fa-wind"></i>
+                            <span>Sailing Yachts</span>
+                        </div>
+                        <div class="cat-filter-card" data-filter="catamaran">
+                            <i class="fas fa-columns"></i>
+                            <span>Catamarans</span>
+                        </div>
+                    </div>
+
+                    <div class="fleet-toolbar">
+                        <span id="resultsCount">Showing 4 Yachts</span>
+                        <div class="view-toggle">
+                            <button class="active"><i class="fas fa-th-large"></i></button>
+                            <button><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="grid-2" id="yachtGrid">
+                        <!-- Yacht 1 -->
+                        <div class="yacht-card reveal" data-type="motor" data-guests="12" data-price="45000"
+                            data-size="45">
+                            <div class="yacht-img">
+                                <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&q=80&w=800"
+                                    alt="Serenity Blue">
+                                <div class="yacht-tag">New</div>
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Serenity Blue</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 12 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 45m</span>
+                                </div>
+                                <p>Modern elegance with extensive deck spaces.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$45,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 2 -->
+                        <div class="yacht-card reveal" style="transition-delay: 0.1s;" data-type="motor"
+                            data-guests="16" data-price="120000" data-size="62">
+                            <div class="yacht-img">
+                                <img src="https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg"
+                                    alt="Royal Majesty">
+                                <div class="yacht-tag">Picks</div>
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Royal Majesty</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 16 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 62m</span>
+                                </div>
+                                <p>Ultimate luxury with heli-deck and spa.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$120,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 3 -->
+                        <div class="yacht-card reveal" style="transition-delay: 0.2s;" data-type="catamaran"
+                            data-guests="10" data-price="32000" data-size="38">
+                            <div class="yacht-img">
+                                <img src="https://images.pexels.com/photos/29318856/pexels-photo-29318856.jpeg"
+                                    alt="Ocean Pearl">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Ocean Pearl</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 10 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 38m</span>
+                                </div>
+                                <p>Sleek design for high-speed cruising.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$32,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 4 -->
+                        <div class="yacht-card reveal" style="transition-delay: 0.3s;" data-type="sailing"
+                            data-guests="8" data-price="25000" data-size="32">
+                            <div class="yacht-img">
+                                <img src="https://images.pexels.com/photos/6750264/pexels-photo-6750264.jpeg"
+                                    alt="Wind Spirit">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Wind Spirit</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 8 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 32m</span>
+                                </div>
+                                <p>Traditional sailing yacht with modern comfort.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$25,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 5 -->
+                        <div class="yacht-card reveal" data-type="motor" data-guests="20" data-price="150000"
+                            data-size="70">
+                            <div class="yacht-img">
+                                <img src="https://images.pexels.com/photos/13436302/pexels-photo-13436302.jpeg"
+                                    alt="Majestic Star">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Majestic Star</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 20 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 70m</span>
+                                </div>
+                                <p>Top-tier luxury with cinema, gym, and spa.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$150,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 6 -->
+                        <div class="yacht-card reveal" data-type="catamaran" data-guests="8" data-price="28000"
+                            data-size="34">
+                            <div class="yacht-img">
+                                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800"
+                                    alt="Blue Lagoon">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Blue Lagoon</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 8 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 34m</span>
+                                </div>
+                                <p>Spacious catamaran perfect for families.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$28,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 7 -->
+                        <div class="yacht-card reveal" data-type="motor" data-guests="14" data-price="65000"
+                            data-size="50">
+                            <div class="yacht-img">
+                                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=800"
+                                    alt="Sea Breeze">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Sea Breeze</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 14 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 50m</span>
+                                </div>
+                                <p>Classic motor yacht with modern amenities.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$65,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 8 -->
+                        <div class="yacht-card reveal" data-type="sailing" data-guests="6" data-price="18000"
+                            data-size="28">
+                            <div class="yacht-img">
+                                <img src="https://images.pexels.com/photos/21825612/pexels-photo-21825612.jpeg"
+                                    alt="Ocean Whisper">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Ocean Whisper</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 6 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 28m</span>
+                                </div>
+                                <p>Intimate sailing experience for couples.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$18,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 9 -->
+                        <div class="yacht-card reveal" data-type="catamaran" data-guests="10" data-price="40000"
+                            data-size="42">
+                            <div class="yacht-img">
+                                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80&w=800"
+                                    alt="Island Hopper">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Island Hopper</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 10 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 42m</span>
+                                </div>
+                                <p>Stable and luxurious catamaran for groups.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$40,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yacht 10 -->
+                        <div class="yacht-card reveal" data-type="motor" data-guests="12" data-price="55000"
+                            data-size="48">
+                            <div class="yacht-img">
+                                <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&q=80&w=800"
+                                    alt="Crystal Blue">
+                            </div>
+                            <div class="yacht-info">
+                                <h3>Crystal Blue</h3>
+                                <div class="yacht-meta">
+                                    <span><i class="fas fa-users"></i> 12 Guests</span>
+                                    <span><i class="fas fa-ruler-horizontal"></i> 48m</span>
+                                </div>
+                                <p>Sleek lines and high speed performance.</p>
+                                <div class="yacht-footer">
+                                    <span class="price">$55,000 / week</span>
+                                    <a href="yacht-details.html" class="btn-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination mt-60">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-section" style="border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Client Stories</h2>
+                <p>Hear from those who have experienced the unparalleled luxury of Azure.</p>
+            </div>
+
+            <div class="grid-3 reveal">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200"
+                        alt="Client" class="client-photo">
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"The crew on Serenity Blue was absolutely phenomenal. Every detail was
+                        taken care of before we even asked. A truly magical week."</p>
+                    <div class="client-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span>Chartered Serenity Blue</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                        alt="Client" class="client-photo">
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"I've chartered yachts all over the world, but the process with Azure
+                        was seamless. The Royal Majesty exceeded all expectations."</p>
+                    <div class="client-info">
+                        <h4>James Maxwell</h4>
+                        <span>Chartered Royal Majesty</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+                        alt="Client" class="client-photo">
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"From the private chef to the itinerary planning, everything was
+                        world-class. We will definitely be booking again next summer."</p>
+                    <div class="client-info">
+                        <h4>Elena Rossi</h4>
+                        <span>Chartered Ocean Pearl</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo.svg"
+                            alt="Azure Logo">AZURE</a>
+                    <p class="footer-text">The world's leading luxury yacht charter company, providing bespoke maritime
+                        experiences for the elite traveler.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Popular Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">French Riviera</a></li>
+                        <li><a href="#">Amalfi Coast</a></li>
+                        <li><a href="#">Greek Islands</a></li>
+                        <li><a href="#">The Bahamas</a></li>
+                        <li><a href="#">Monaco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive exclusive offers and destination guides.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff;">
+                        <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Azure Yacht Charters. All rights reserved.</p>
+                <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to Top"><i
+                        class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

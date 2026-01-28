@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide - Azure Yacht Charters</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header id="main-header" class="scrolled">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Azure Logo">AZURE</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fleet.html" class="nav-link">Our Fleet</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="blog.html" class="nav-link active">Travel Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="inquiry.html" class="btn btn-primary">Book Now</a>
+
+                <div class="profile-dropdown">
+                    <button class="profile-icon" id="profile-toggle" aria-label="User Profile">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown-menu" id="profile-menu">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header"
+        style="background-image: url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&q=80&w=1200');">
+        <div class="container text-center reveal">
+            <h1>The Azure Journal</h1>
+            <p>Insights into the world of luxury yachting and global travel.</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Curated Travel Insights</h2>
+                <p>Expert advice on luxury destinations, yachting etiquette, and the finest maritime experiences.
+                    Discover the art of travel with Azure.</p>
+            </div>
+
+            <div class="grid-3 reveal" style="margin-bottom: 60px;">
+                <div class="highlight-card text-center"
+                    style="padding: 30px; background: var(--bg-card); border: 1px solid var(--border-color);">
+                    <i class="fas fa-map-marked-alt"
+                        style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Destinations</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Unlock hidden gems and exclusive ports of
+                        call around the globe.</p>
+                </div>
+                <div class="highlight-card text-center"
+                    style="padding: 30px; background: var(--bg-card); border: 1px solid var(--border-color);">
+                    <i class="fas fa-glass-cheers"
+                        style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Lifestyle</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Experience the pinnacle of fine dining,
+                        events, and onboard leisure.</p>
+                </div>
+                <div class="highlight-card text-center"
+                    style="padding: 30px; background: var(--bg-card); border: 1px solid var(--border-color);">
+                    <i class="fas fa-anchor" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Yachting Tips</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Essential guides for first-time charters
+                        and seasoned sailors alike.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="blog-layout">
+                <div class="blog-main">
+                    <div class="grid-2">
+                        <!-- Post 1 -->
+                        <article class="post-card reveal">
+                            <div class="post-img">
+                                <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&q=80&w=800"
+                                    alt="Post 1">
+                                <span class="post-category">Lifestyle</span>
+                            </div>
+                            <div class="post-content">
+                                <span class="post-date">Oct 12, 2025</span>
+                                <h3>The Art of Selecting the Perfect Superyacht</h3>
+                                <p>Navigating the sea of options when it comes to choosing your next charter...</p>
+                                <a href="#" class="btn-link">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article class="post-card reveal" style="transition-delay: 0.1s;">
+                            <div class="post-img">
+                                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=800"
+                                    alt="Post 2">
+                                <span class="post-category">Destinations</span>
+                            </div>
+                            <div class="post-content">
+                                <span class="post-date">Sep 28, 2025</span>
+                                <h3>Hidden Mediterranean Gems: Amalfi's Secret Ports</h3>
+                                <p>Beyond the tourist trails, discover the secluded bays of the Italian coast...</p>
+                                <a href="#" class="btn-link">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 3 -->
+                        <article class="post-card reveal">
+                            <div class="post-img">
+                                <img src="https://images.pexels.com/photos/8478939/pexels-photo-8478939.jpeg"
+                                    alt="Post 3">
+                                <span class="post-category">Culinary</span>
+                            </div>
+                            <div class="post-content">
+                                <span class="post-date">Aug 15, 2025</span>
+                                <h3>Dining at Sea: The Onboard Michelin Experience</h3>
+                                <p>How our private chefs curate world-class dining experiences in the middle of the
+                                    ocean...</p>
+                                <a href="#" class="btn-link">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 4 -->
+                        <article class="post-card reveal" style="transition-delay: 0.1s;">
+                            <div class="post-img">
+                                <img src="https://images.pexels.com/photos/13029209/pexels-photo-13029209.jpeg"
+                                    alt="Post 4">
+                                <span class="post-category">Adventure</span>
+                            </div>
+                            <div class="post-content">
+                                <span class="post-date">Jul 05, 2025</span>
+                                <h3>Unveiling the Latest in Water Toy Technology</h3>
+                                <p>From e-foil boards to personal submersibles, the future of ocean fun is here...</p>
+                                <a href="#" class="btn-link">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 5 -->
+                        <article class="post-card reveal">
+                            <div class="post-img">
+                                <img src="https://images.pexels.com/photos/8306567/pexels-photo-8306567.jpeg"
+                                    alt="Post 5">
+                                <span class="post-category">Lifestyle</span>
+                            </div>
+                            <div class="post-content">
+                                <span class="post-date">Jun 20, 2025</span>
+                                <h3>Superyacht Etiquette: The Dos and Don'ts</h3>
+                                <p>Essential tips for guests to ensure a smooth and respectful etiquette onboard.</p>
+                                <a href="#" class="btn-link">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 6 -->
+                        <article class="post-card reveal" style="transition-delay: 0.1s;">
+                            <div class="post-img">
+                                <img src="https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?auto=format&fit=crop&q=80&w=800"
+                                    alt="Post 6">
+                                <span class="post-category">Charter Tips</span>
+                            </div>
+                            <div class="post-content">
+                                <span class="post-date">May 15, 2025</span>
+                                <h3>Packing for Paradise: The Essentials</h3>
+                                <p>A curated guide on what to bring (and what to leave behind) for your voyage.</p>
+                                <a href="#" class="btn-link">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Post 7 -->
+                        <article class="post-card reveal">
+                            <div class="post-img">
+                                <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&q=80&w=800"
+                                    alt="Post 7">
+                                <span class="post-category">Destinations</span>
+                            </div>
+                            <div class="post-content">
+                                <span class="post-date">Apr 10, 2025</span>
+                                <h3>Winter Escapes: Caribbean Hotspots</h3>
+                                <p>Escape the cold and find the most exclusive anchorages in the Caribbean.</p>
+                                <a href="#" class="btn-link">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="blog-sidebar reveal">
+                    <div class="sidebar-widget">
+                        <h3>Search Guide</h3>
+                        <div style="display: flex; border: 1px solid var(--border-color);">
+                            <input type="text" placeholder="Search..."
+                                style="flex: 1; padding: 10px; border: none; background: var(--bg-section); color: var(--text-main);">
+                            <button style="padding: 10px; border: none; background: var(--accent); color: white;"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget mt-40">
+                        <h3>Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Yacht Lifestyle (12)</a></li>
+                            <li><a href="#">Destination Guides (45)</a></li>
+                            <li><a href="#">Charter Tips (18)</a></li>
+                            <li><a href="#">Culinary (9)</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <div class="cta-content">
+                    <h2>Plan Your Perfect Yacht Experience</h2>
+                    <p>Ready to embark on the journey of a lifetime? Our team is here to craft your bespoke itinerary.
+                    </p>
+                    <a href="inquiry.html" class="btn btn-primary mt-20">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 60px;
+        }
+
+        .post-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .post-img {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .post-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .post-card:hover .post-img img {
+            transform: scale(1.05);
+        }
+
+        .post-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .post-content {
+            padding: 30px;
+        }
+
+        .post-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .post-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        @media (max-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .blog-main .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo.svg"
+                            alt="Azure Logo">AZURE</a>
+                    <p class="footer-text">The world's leading luxury yacht charter company, providing bespoke maritime
+                        experiences for the elite traveler.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Popular Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">French Riviera</a></li>
+                        <li><a href="#">Amalfi Coast</a></li>
+                        <li><a href="#">Greek Islands</a></li>
+                        <li><a href="#">The Bahamas</a></li>
+                        <li><a href="#">Monaco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive exclusive offers and destination guides.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff;">
+                        <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Azure Yacht Charters. All rights reserved.</p>
+                <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to Top"><i
+                        class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

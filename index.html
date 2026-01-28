@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Yacht Charters | Luxury Yacht Experience</title>
+    <meta name="description"
+        content="Experience the ultimate luxury with Azure Yacht Charters. Explore our exclusive fleet and breathtaking destinations.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Azure Logo">AZURE</a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="fleet.html" class="nav-link">Our Fleet</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="blog.html" class="nav-link">Travel Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="inquiry.html" class="btn btn-primary">Book Now</a>
+
+                <div class="profile-dropdown">
+                    <button class="profile-icon" id="profile-toggle" aria-label="User Profile">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown-menu" id="profile-menu">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="assets/images/hero.png" alt="Luxury Yacht" class="hero-img">
+        <div class="container hero-content">
+            <h1 class="reveal">Elevate Your Presence <br> <span>On The Azure Waters</span></h1>
+            <p class="reveal" style="transition-delay: 0.2s;">Discover unparalleled luxury and bespoke maritime
+                adventures with the world's most exclusive yacht charter fleet.</p>
+            <div class="hero-btns reveal" style="transition-delay: 0.4s;">
+                <a href="fleet.html" class="btn btn-primary">Explore Fleet</a>
+                <a href="destinations.html" class="btn btn-outline">Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="section highlights">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>The Ultimate Experience</h2>
+                <p>We provide more than just a journey; we provide a masterpiece of hospitality on the open sea.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="highlight-card reveal">
+                    <i class="fas fa-ship"></i>
+                    <h3>Elite Fleet</h3>
+                    <p>Access the most prestigious yachts equipped with state-of-the-art amenities.</p>
+                </div>
+                <div class="highlight-card reveal" style="transition-delay: 0.2s;">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Bespoke Routes</h3>
+                    <p>Custom-tailored itineraries to the hidden gems of the Mediterranean and Caribbean.</p>
+                </div>
+                <div class="highlight-card reveal" style="transition-delay: 0.4s;">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Private Crew</h3>
+                    <p>Highly trained professionals dedicated to your safety, comfort, and culinary desires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Fleet -->
+    <section class="section fleet-preview bg-section">
+        <div class="container">
+            <div class="section-header-row">
+                <div class="section-title" style="text-align: left; margin: 0;">
+                    <h2>Our Signature Fleet</h2>
+                    <p>Curated selection of world-class vessels</p>
+                </div>
+                <a href="fleet.html" class="btn-link">View All Fleet <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid-3 mt-60">
+                <!-- Yacht card placeholder -->
+                <div class="yacht-card reveal">
+                    <div class="yacht-img">
+                        <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&q=80&w=800"
+                            alt="Superyacht Serenity">
+                        <div class="yacht-tag">Featured</div>
+                    </div>
+                    <div class="yacht-info">
+                        <h3>Serenity Blue</h3>
+                        <div class="yacht-meta">
+                            <span><i class="fas fa-users"></i> 12 Guests</span>
+                            <span><i class="fas fa-ruler-horizontal"></i> 45m</span>
+                        </div>
+                        <p>A masterpiece of modern engineering with a sprawling sun deck.</p>
+                        <div class="yacht-footer">
+                            <span class="price">From $45,000 / week</span>
+                            <a href="yacht-details.html" class="btn-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="yacht-card reveal" style="transition-delay: 0.2s;">
+                    <div class="yacht-img">
+                        <img src="https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg" alt="Royal Majesty">
+                    </div>
+                    <div class="yacht-info">
+                        <h3>Royal Majesty</h3>
+                        <div class="yacht-meta">
+                            <span><i class="fas fa-users"></i> 16 Guests</span>
+                            <span><i class="fas fa-ruler-horizontal"></i> 62m</span>
+                        </div>
+                        <p>The pinnacle of luxury with a private cinema and helipad.</p>
+                        <div class="yacht-footer">
+                            <span class="price">From $120,000 / week</span>
+                            <a href="yacht-details.html" class="btn-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="yacht-card reveal" style="transition-delay: 0.4s;">
+                    <div class="yacht-img">
+                        <img src="https://images.pexels.com/photos/29318856/pexels-photo-29318856.jpeg"
+                            alt="Ocean Pearl">
+                    </div>
+                    <div class="yacht-info">
+                        <h3>Ocean Pearl</h3>
+                        <div class="yacht-meta">
+                            <span><i class="fas fa-users"></i> 10 Guests</span>
+                            <span><i class="fas fa-ruler-horizontal"></i> 38m</span>
+                        </div>
+                        <p>Sleek design and rapid speed for island hopping in style.</p>
+                        <div class="yacht-footer">
+                            <span class="price">From $32,000 / week</span>
+                            <a href="yacht-details.html" class="btn-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience-section">
+        <div class="container grid-2 align-center">
+            <div class="experience-img reveal">
+                <img src="assets/images/cabin.png" alt="Luxury Suite" class="rounded">
+            </div>
+            <div class="experience-text reveal">
+                <h2>Redefining Coastal Living</h2>
+                <p>Step into a world where your every whim is anticipated. Our yachts are floating villas, designed to
+                    provide the same comfort and luxury as a five-star hotel with the freedom of the ocean.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Private Chef & Concierge</li>
+                    <li><i class="fas fa-check"></i> Water Sports Equipment</li>
+                    <li><i class="fas fa-check"></i> State-of-the-Art Entertainment</li>
+                    <li><i class="fas fa-check"></i> Wellness & Spa Facilities</li>
+                </ul>
+                <a href="about.html" class="btn btn-primary mt-20">Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container text-center reveal">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>Our experts are here to help you choose the perfect vessel for your journey.</p>
+            <a href="inquiry.html" class="btn btn-primary">Start Planning</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo.svg"
+                            alt="Azure Logo">AZURE</a>
+                    <p class="footer-text">The world's leading luxury yacht charter company, providing bespoke maritime
+                        experiences for the elite traveler.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Popular Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">French Riviera</a></li>
+                        <li><a href="#">Amalfi Coast</a></li>
+                        <li><a href="#">Greek Islands</a></li>
+                        <li><a href="#">The Bahamas</a></li>
+                        <li><a href="#">Monaco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive exclusive offers and destination guides.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff;">
+                        <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Azure Yacht Charters. All rights reserved.</p>
+                <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to Top"><i
+                        class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

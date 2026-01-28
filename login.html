@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Azure Yacht Charters</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-section">
+
+    <!-- Header -->
+
+
+    <div class="auth-wrapper" style="min-height: 100vh;">
+        <div class="container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Azure Logo">AZURE</a>
+                    <h2>Welcome Back</h2>
+                    <p>Enter your details to access your dashboard.</p>
+                </div>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group mt-20">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-options mt-10">
+                        <label class="remember-me">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" class="btn-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-30" style="width: 100%;">Sign In</button>
+                    <p class="auth-footer mt-20">
+                        Don't have an account? <a href="register.html" class="btn-link">Register Now</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .auth-wrapper {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-card {
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .auth-header h2 {
+            margin: 20px 0 10px;
+        }
+
+        .auth-header p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .auth-form {
+            text-align: left;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .auth-footer {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

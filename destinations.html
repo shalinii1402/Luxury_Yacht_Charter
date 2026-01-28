@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Azure Yacht Charters</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="main-header" class="scrolled">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Azure Logo">AZURE</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fleet.html" class="nav-link">Our Fleet</a>
+                <a href="destinations.html" class="nav-link active">Destinations</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="blog.html" class="nav-link">Travel Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="inquiry.html" class="btn btn-primary">Book Now</a>
+
+                <div class="profile-dropdown">
+                    <button class="profile-icon" id="profile-toggle" aria-label="User Profile">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown-menu" id="profile-menu">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header"
+        style="background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80&w=1200');">
+        <div class="container text-center reveal">
+            <h1>Infinite Horizons</h1>
+            <p>Explore the world's most breathtaking coastal destinations.</p>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center reveal">
+                <h2>Popular Yacht Destinations</h2>
+                <p>From the Mediterranean to the Caribbean, discover our most sought-after locations.</p>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- Port 1 -->
+                <div class="dest-card reveal">
+                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=800"
+                        alt="French Riviera">
+                    <div class="dest-content">
+                        <h3>French Riviera</h3>
+                        <p>The playground of the elite. Explore Monaco, St. Tropez, and Cannes.</p>
+                        <a href="yacht-details.html" class="btn-link">Explore Area</a>
+                    </div>
+                </div>
+
+                <!-- Port 2 -->
+                <div class="dest-card reveal" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80&w=800"
+                        alt="Amalfi Coast">
+                    <div class="dest-content">
+                        <h3>Amalfi Coast</h3>
+                        <p>Dramatic cliffs and colorful villages. The jewel of the Italian coastline.</p>
+                        <a href="yacht-details.html" class="btn-link">Explore Area</a>
+                    </div>
+                </div>
+
+                <!-- Port 3 -->
+                <div class="dest-card reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&q=80&w=800"
+                        alt="Greek Islands">
+                    <div class="dest-content">
+                        <h3>Greek Islands</h3>
+                        <p>Ancient history meets turquoise waters. Ideal for island hopping.</p>
+                        <a href="yacht-details.html" class="btn-link">Explore Area</a>
+                    </div>
+                </div>
+
+                <!-- Port 4 -->
+                <div class="dest-card reveal">
+                    <img src="https://images.pexels.com/photos/6454837/pexels-photo-6454837.jpeg" alt="The Bahamas">
+                    <div class="dest-content">
+                        <h3>The Bahamas</h3>
+                        <p>Crystal clear tropical paradise and world-class diving spots.</p>
+                        <a href="yacht-details.html" class="btn-link">Explore Area</a>
+                    </div>
+                </div>
+
+                <!-- Port 5 -->
+                <div class="dest-card reveal" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800"
+                        alt="Maldives">
+                    <div class="dest-content">
+                        <h3>The Maldives</h3>
+                        <p>Overwater bungalows and pristine atolls. The ultimate escape.</p>
+                        <a href="yacht-details.html" class="btn-link">Explore Area</a>
+                    </div>
+                </div>
+
+                <!-- Port 6 -->
+                <div class="dest-card reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.pexels.com/photos/29175634/pexels-photo-29175634.jpeg" alt="Croatia">
+                    <div class="dest-content">
+                        <h3>Croatia</h3>
+                        <p>Island-dotted coastline and historic walled cities on the Adriatic.</p>
+                        <a href="yacht-details.html" class="btn-link">Explore Area</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section class="section bg-section">
+        <div class="container">
+            <div class="section-title text-center reveal">
+                <h2>Best Time to Charter</h2>
+                <p>Plan your voyage according to the perfect sailing seasons.</p>
+            </div>
+
+            <div class="season-grid reveal">
+                <div class="season-card">
+                    <div class="season-icon"><i class="fas fa-sun"></i></div>
+                    <h3>Summer</h3>
+                    <p class="text-muted">Jun - Aug</p>
+                    <p style="margin-top: 10px;">Mediterranean prime season. Warm days in France, Italy, and Greece.</p>
+                </div>
+                <div class="season-card">
+                    <div class="season-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Spring</h3>
+                    <p class="text-muted">Apr - May</p>
+                    <p style="margin-top: 10px;">Caribbean before the humidity. Quiet bays and steady winds.</p>
+                </div>
+                <div class="season-card">
+                    <div class="season-icon"><i class="fas fa-snowflake"></i></div>
+                    <h3>Winter</h3>
+                    <p class="text-muted">Dec - Feb</p>
+                    <p style="margin-top: 10px;">Escape the cold. The Bahamas and Caribbean are at their prime.</p>
+                </div>
+                <div class="season-card">
+                    <div class="season-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <h3>Autumn</h3>
+                    <p class="text-muted">Sep - Oct</p>
+                    <p style="margin-top: 10px;">Shoulder season in Europe. Fewer crowds and lower rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Experiences -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center reveal">
+                <h2>Unforgettable Experiences</h2>
+                <p>Curated activities to elevate your charter journey.</p>
+            </div>
+
+            <!-- Experience 1 -->
+            <div class="experience-card reveal">
+                <div class="exp-img">
+                    <img src="https://images.pexels.com/photos/17007145/pexels-photo-17007145.jpeg"
+                        alt="Island Hopping">
+                </div>
+                <div class="exp-content">
+                    <h3>Private Island Hopping</h3>
+                    <p class="mb-20">Access secluded coves and hidden beaches accessible only by yacht. Create your own
+                        itinerary and wake up in a new paradise every morning.</p>
+                    <a href="inquiry.html" class="btn btn-primary mt-20" style="width: fit-content;">Plan Your Trip</a>
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="experience-card reveal">
+                <div class="exp-content">
+                    <h3>Water Sports & Adventure</h3>
+                    <p class="mb-20">From jet skis to seabobs, our fleet comes equipped with the latest toys. Enjoy
+                        diving, snorkeling, or paddleboarding in crystal clear waters.</p>
+                    <a href="inquiry.html" class="btn btn-primary mt-20" style="width: fit-content;">View Equipment</a>
+                </div>
+                <div class="exp-img">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800"
+                        alt="Water Sports">
+                </div>
+            </div>
+            <!-- Experience 3 -->
+            <div class="experience-card reveal">
+                <div class="exp-img">
+                    <img src="https://images.pexels.com/photos/29106106/pexels-photo-29106106.jpeg" alt="Fine Dining">
+                </div>
+                <div class="exp-content">
+                    <h3>Onboard Fine Dining</h3>
+                    <p class="mb-20">Savor gourmet meals prepared by your personal chef according to your preferences.
+                        Enjoy sunset dinners on the deck with the world's best views.</p>
+                    <a href="inquiry.html" class="btn btn-primary mt-20" style="width: fit-content;">Sample Menus</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo.svg"
+                            alt="Azure Logo">AZURE</a>
+                    <p class="footer-text">The world's leading luxury yacht charter company, providing bespoke maritime
+                        experiences for the elite traveler.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Popular Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">French Riviera</a></li>
+                        <li><a href="#">Amalfi Coast</a></li>
+                        <li><a href="#">Greek Islands</a></li>
+                        <li><a href="#">The Bahamas</a></li>
+                        <li><a href="#">Monaco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive exclusive offers and destination guides.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff;">
+                        <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Azure Yacht Charters. All rights reserved.</p>
+                <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to Top"><i
+                        class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
