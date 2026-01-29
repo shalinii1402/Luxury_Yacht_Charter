@@ -1610,6 +1610,28 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter-form .btn {
+        width: auto !important;
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .yacht-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .yacht-footer .btn-link {
+        align-self: flex-start;
+    }
 }
 
 @media (max-width: 768px) {
