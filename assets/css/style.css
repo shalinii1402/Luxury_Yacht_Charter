@@ -55,6 +55,11 @@
     --nav-link: var(--gray-100);
 }
 
+/* Dark Mode Date Picker Fix */
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -64,6 +69,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from mobile menu */
 }
 
 body {
@@ -73,7 +80,8 @@ body {
     color: var(--text-main);
     background-color: var(--bg-body);
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    width: 100%;
 }
 
 h1,
@@ -351,6 +359,7 @@ img {
 
 .yacht-info {
     padding: 30px;
+    text-align: center;
 }
 
 .yacht-meta {
@@ -359,6 +368,7 @@ img {
     margin-bottom: 15px;
     font-size: 0.9rem;
     color: var(--text-muted);
+    justify-content: center;
 }
 
 .yacht-meta i {
@@ -772,6 +782,39 @@ header .container {
 .slider {
     width: 100%;
     accent-color: var(--accent);
+}
+
+/* Password Toggle */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.toggle-password:hover {
+    color: var(--accent);
+}
+
+.auth-btn {
+    width: auto !important;
+    min-width: 180px;
+    display: block !important;
+    margin: 30px auto 0 !important;
+    padding: 12px 40px !important;
 }
 
 /* Fleet Main */
@@ -1197,10 +1240,22 @@ header.scrolled .theme-toggle:hover {
 
 .exp-content {
     width: 50%;
-    padding: 60px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.exp-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.exp-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 @media (max-width: 768px) {
@@ -1580,6 +1635,7 @@ footer {
         top: 0;
         right: 0;
         width: 300px;
+        max-width: 85vw;
         height: 100vh;
         background-color: var(--primary);
         flex-direction: column;
@@ -1588,6 +1644,7 @@ footer {
         transition: var(--transition);
         transform: translateX(100%);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
     }
 
     .nav-links.mobile-active {
@@ -1625,12 +1682,22 @@ footer {
 @media (max-width: 992px) {
     .yacht-footer {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 15px;
     }
 
     .yacht-footer .btn-link {
-        align-self: flex-start;
+        align-self: center;
+    }
+
+    .filters-sidebar .btn {
+        width: auto !important;
+        min-width: 200px;
+        padding: 12px 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        margin-top: 15px !important;
     }
 }
 
@@ -1639,6 +1706,8 @@ footer {
         font-size: 2.5rem;
     }
 
+    .grid-3,
+    .grid-2,
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -1664,6 +1733,51 @@ footer {
 
     .logo img {
         height: 30px;
+    }
+
+    /* Experience Section Mobile Fix */
+    .experience-section .grid-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experience-img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .experience-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .experience-text {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .features-list {
+        display: inline-block;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    /* Contact Page Mobile Fix */
+    .contact-form-box {
+        padding: 20px;
+        /* Reduce padding on mobile */
+    }
+
+    .info-item {
+        flex-direction: row;
+        /* Keep row but ensure it wraps if needed */
+        flex-wrap: wrap;
+    }
+
+    .map-card iframe {
+        height: 300px;
+        /* Reduce map height on mobile */
     }
 }
 
