@@ -8,93 +8,310 @@
     <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body class="bg-section">
-
-    <!-- Header -->
-
-
-    <div class="auth-wrapper" style="min-height: 100vh;">
-        <div class="container">
-            <div class="auth-card">
-                <div class="auth-header">
-                    <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Azure Logo">AZURE</a>
-                    <h2>Welcome Back</h2>
-                    <p>Enter your details to access your dashboard.</p>
-                </div>
-                <form class="auth-form">
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="name@example.com" required>
-                    </div>
-                    <div class="form-group mt-20">
-                        <label>Password</label>
-                        <div class="password-wrapper">
-                            <input type="password" placeholder="••••••••" required>
-                            <i class="fas fa-eye toggle-password"></i>
-                        </div>
-                    </div>
-                    <div class="form-options mt-20">
-                        <label class="remember-me">
-                            <input type="checkbox"> Remember me
-                        </label>
-                        <a href="#" class="btn-link">Forgot password?</a>
-                    </div>
-                    <button type="submit" class="btn btn-primary auth-btn">Sign In</button>
-                    <p class="auth-footer mt-20">
-                        Don't have an account? <a href="register.html" class="btn-link">Register Now</a>
-                    </p>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <style>
-        .auth-wrapper {
-            min-height: 80vh;
+        .auth-page {
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: linear-gradient(135deg, var(--bg-section) 0%, var(--bg-body) 100%);
+            padding: 10px;
+            overflow: hidden;
         }
 
         .auth-card {
-            max-width: 450px;
-            margin: 0 auto;
-            background-color: var(--bg-card);
-            padding: 50px;
+            width: 100%;
+            max-width: 440px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 30px 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
             border: 1px solid var(--border-color);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
-        .auth-header h2 {
-            margin: 20px 0 10px;
+        .auth-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .auth-header .logo {
+            display: inline-flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+        }
+
+        .auth-header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
         }
 
         .auth-header p {
             color: var(--text-muted);
-            margin-bottom: 30px;
+            font-size: 0.9rem;
         }
 
-        .auth-form {
-            text-align: left;
+        .social-auth {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 0;
         }
 
-        .form-options {
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            height: 44px;
+            border-radius: 25px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            cursor: pointer;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            margin-bottom: 0;
+        }
+
+        .btn-google {
+            background-color: #ffffff;
+            color: #444444;
+        }
+
+        .btn-google img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-google:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-facebook {
+            background-color: #1877F2;
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-facebook i {
+            font-size: 1.1rem;
+        }
+
+        .btn-facebook:hover {
+            background-color: #166fe5;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 15px 0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .auth-divider::before,
+        .auth-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .auth-divider span {
+            padding: 0 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-section);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.1);
+        }
+
+        .password-input-wrapper {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .toggle-password:hover {
+            color: var(--accent);
+        }
+
+        .form-utils {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
             font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            accent-color: var(--accent);
+            width: 16px;
+            height: 16px;
+        }
+
+        .auth-btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: none;
+            margin-bottom: 0;
         }
 
         .auth-footer {
             text-align: center;
+            color: var(--text-muted);
             font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        .auth-footer a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 576px) {
+            .auth-card {
+                padding: 25px 30px;
+            }
+
+            .social-auth {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
+</head>
 
-    <script src="assets/js/main.js"></script>
+<body class="bg-section">
+
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.svg" alt="Azure Logo">
+                    AZURE
+                </a>
+                <h1>Welcome Back</h1>
+                <p>Login to your account to continue</p>
+            </div>
+
+            <form action="#" class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                        <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                    </div>
+                </div>
+
+                <div class="form-utils">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="btn-link" style="font-size: 0.85rem;">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-btn">Login</button>
+
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-auth">
+                    <button type="button" class="btn-social btn-google">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="btn-social btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </button>
+                </div>
+
+                <p class="auth-footer">
+                    Don't have an account? <a href="register.html">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
 </body>
 
 </html>
