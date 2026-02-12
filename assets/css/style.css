@@ -1740,11 +1740,13 @@ footer {
 
     /* Fix header overlap on mobile */
     .header-actions .btn {
-        display: none;
+        display: inline-flex;
+        padding: 6px 12px;
+        font-size: 0.75rem;
     }
 
     .header-actions {
-        gap: 10px;
+        gap: 8px;
     }
 
     .logo {
