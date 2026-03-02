@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Yacht Charters | Home 2 - Premium Experience</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <meta name="description"
+        content="Experience the ultimate luxury with Azure Yacht Charters. Explore our exclusive fleet and breathtaking destinations.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Home 2 Specific Styles */
+        .hero-h2 {
+            height: 100vh;
+            background: url('assets/images/hero-home2.png') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 31, 63, 0.7));
+        }
+
+        .hero-h2 .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-h2 h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-h2 p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .dest-card {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        .dest-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .dest-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 31, 63, 0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .dest-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .dest-card:hover .dest-overlay {
+            background: linear-gradient(rgba(197, 160, 89, 0.3), rgba(0, 31, 63, 0.9));
+        }
+
+        .dest-card h3 {
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+        }
+
+        .dest-card span {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .services-section {
+            background-color: var(--bg-section);
+            padding: 100px 0;
+        }
+
+        .service-icon-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 50px 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .service-icon-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon-box i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+
+        .service-icon-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .service-icon-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Ocean Escape Section */
+        .ocean-escape {
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .escape-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .escape-img {
+            position: relative;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .escape-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .escape-content {
+            text-align: center;
+        }
+
+        .escape-content h2 {
+            font-size: 3.8rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .escape-content h2 span {
+            color: var(--accent);
+        }
+
+        .escape-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin: 0 auto 45px;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        @media (max-width: 1024px) {
+            .escape-grid {
+                gap: 50px;
+            }
+
+            .escape-content h2 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .escape-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .escape-img {
+                order: 2;
+            }
+
+            .escape-content {
+                order: 1;
+                text-align: center;
+            }
+
+            .escape-content p {
+                margin: 0 auto 40px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .destination-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-h2 h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-h2 h1 {
+                font-size: 2.8rem;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .destination-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Azure Logo">AZURE</a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home2.html" class="nav-link active">Home 2</a>
+                <a href="fleet.html" class="nav-link">Our Fleet</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="blog.html" class="nav-link">Travel Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="inquiry.html" class="btn btn-primary">Book Now</a>
+
+                <div class="profile-dropdown">
+                    <button class="profile-icon" id="profile-toggle" aria-label="User Profile">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown-menu" id="profile-menu">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1️⃣ Hero Section -->
+    <section class="hero-h2">
+        <div class="container">
+            <h1 class="reveal">Experience the Ultimate <br> <span>Luxury at Sea</span></h1>
+            <p class="reveal" style="transition-delay: 0.2s;">Discover a world of elegance, privacy, and limitless
+                horizons with our bespoke yacht charter services.</p>
+            <div class="reveal" style="transition-delay: 0.4s;">
+                <a href="fleet.html" class="btn btn-primary">Explore Fleet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ Ocean Escape Section -->
+    <section class="section ocean-escape">
+        <div class="container">
+            <div class="escape-grid">
+                <div class="escape-img reveal">
+                    <img src="assets/images/deck.png" alt="Luxury Yacht Deck">
+                </div>
+                <div class="escape-content reveal" style="transition-delay: 0.2s;">
+                    <h2>Crafted for the <br> <span>Ultimate Ocean Escape</span></h2>
+                    <p>Indulge in a sanctuary of refined elegance where the horizon meets unparalleled comfort. Every
+                        detail of our maritime experiences is meticulously curated to provide a seamless blend of
+                        sophisticated design and breathtaking natural beauty. Whether you are seeking a peaceful retreat
+                        or an adventurous journey across the turquoise waters, our fleet offers the perfect vessel for
+                        your next extraordinary escape.</p>
+                    <a href="fleet.html" class="btn btn-primary">Discover the Experience</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ Popular Destinations -->
+    <section class="section bg-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Popular Destinations</h2>
+                <p>Sail to the most breathtaking corners of the globe.</p>
+            </div>
+
+            <div class="destination-grid">
+                <div class="dest-card reveal">
+                    <img src="https://images.unsplash.com/photo-1559586616-361e18714958?auto=format&fit=crop&q=80&w=600"
+                        alt="Monaco">
+                    <div class="dest-overlay">
+                        <h3>Monaco</h3>
+                        <span>French Riviera</span>
+                    </div>
+                </div>
+                <div class="dest-card reveal" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=600"
+                        alt="Amalfi Coast">
+                    <div class="dest-overlay">
+                        <h3>Amalfi Coast</h3>
+                        <span>Italy</span>
+                    </div>
+                </div>
+                <div class="dest-card reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.pexels.com/photos/161342/greece-santorini-architecture-island-161342.jpeg"
+                        alt="Santorini">
+                    <div class="dest-overlay">
+                        <h3>Santorini</h3>
+                        <span>Greece</span>
+                    </div>
+                </div>
+                <div class="dest-card reveal" style="transition-delay: 0.3s;">
+                    <img src="https://images.pexels.com/photos/1449746/pexels-photo-1449746.jpeg" alt="Bahamas">
+                    <div class="dest-overlay">
+                        <h3>Exuma</h3>
+                        <span>Bahamas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-60 reveal">
+                <a href="destinations.html" class="btn btn-outline">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ Premium Services -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Premium Services</h2>
+                <p>Every detail of your journey is curated to perfection.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="service-icon-box reveal">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Private Chef</h3>
+                    <p>Relish gourmet cuisine prepared by world-class chefs tailored to your dietary preferences.</p>
+                </div>
+                <div class="service-icon-box reveal" style="transition-delay: 0.1s;">
+                    <i class="fas fa-swimmer"></i>
+                    <h3>Water Sports</h3>
+                    <p>From jet skis to diving equipment, enjoy the best water adventure gear on board.</p>
+                </div>
+                <div class="service-icon-box reveal" style="transition-delay: 0.2s;">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>Event Hosting</h3>
+                    <p>Celebrate your special moments in style with our expert event planning and catering services.</p>
+                </div>
+                <div class="service-icon-box reveal" style="transition-delay: 0.3s;">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>Concierge Service</h3>
+                    <p>Our 24/7 dedicated concierge ensures your every whim is catered to, from port bookings to island
+                        tours.</p>
+                </div>
+                <div class="service-icon-box reveal" style="transition-delay: 0.4s;">
+                    <i class="fas fa-spa"></i>
+                    <h3>Wellness & Spa</h3>
+                    <p>Rejuvenate your mind and body with on-board spa treatments and yoga sessions.</p>
+                </div>
+                <div class="service-icon-box reveal" style="transition-delay: 0.5s;">
+                    <i class="fas fa-helicopter"></i>
+                    <h3>Private Transfers</h3>
+                    <p>Luxury transportation from arrival to departure, including helicopter and limo transfers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ Call to Action Section -->
+    <section class="cta-banner">
+        <div class="container text-center reveal">
+            <h2>Book Your Yacht Today</h2>
+            <p>Your dream maritime adventure is just a click away. Let us craft the perfect voyage for you.</p>
+            <a href="inquiry.html" class="btn btn-primary">Book Your Yacht Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo.svg"
+                            alt="Azure Logo">AZURE</a>
+                    <p class="footer-text">The world's leading luxury yacht charter company, providing bespoke maritime
+                        experiences for the elite traveler.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Popular Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">French Riviera</a></li>
+                        <li><a href="#">Amalfi Coast</a></li>
+                        <li><a href="#">Greek Islands</a></li>
+                        <li><a href="#">The Bahamas</a></li>
+                        <li><a href="#">Monaco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive exclusive offers and destination guides.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff;">
+                        <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Azure Yacht Charters. All rights reserved.</p>
+                <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to Top"><i
+                        class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
